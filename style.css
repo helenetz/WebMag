@@ -1,0 +1,140 @@
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+#navConteneur {
+  display: flex;
+  align-items: center; 
+     gap: 26px;
+  margin-bottom: 20px;
+}
+
+
+
+.logo {  
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 20px;
+  height: 50px; 
+  margin: 0;
+  font-size: 20px;
+}
+
+
+
+.navconteneur {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.navconteneur a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navconteneur a:hover {
+    text-decoration: underline;
+}
+
+.mysteres.a{
+    margin-left: 50px;
+}
+
+nav.a {
+    gap: 50px
+}
+
+#texteAppelAction{
+    display: flex;
+}
+
+.avatar{
+   width: 80px;
+   height: 80px;
+   border-radius: 100%;
+   border: 2px solid black;
+   object-fit: cover;
+}
+
+.divThemes{
+    display: flex;
+}
+
+#headerConteneur{
+    margin-top: 30px;
+    background: violet;
+    overflow: hidden;
+    -webkit-box-shadow: 10px 10px 11px 4px rgb(180, 157, 180); 
+   box-shadow: 10px 5px 5px rgb(138, 113, 137);
+
+}
+
+#headerConteneur h3{
+
+    margin-top: 10px;
+    text-align: center;
+}
+
+.h2.TitreArticleP{
+    text-align: center;
+}
+
+.imgArticleP img{
+    height : 100% ;
+    width: 330 px;
+}
+
+.carteArticles{
+   background-color:  #f3eaf3;
+   align-items: center;
+   border-radius: 8px;
+   overflow: hidden;
+   transition: all 1s ease-in-out;
+   text-decoration: none;
+   margin-inline: 10px;
+   border-bottom: 16px;
+}
+
+.divAuteurs{
+    display: flex;
+    gap: 70px;
+    margin-left: 58px;
+}
+
+.avatarAuteurs{
+   width: 80px;
+   height: 80px;
+   border-radius: 100%;
+   border: 2px solid black;
+   object-fit: cover;
+}
+
+.footerConteneur {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .article h2 {
+        font-size: 1.2rem;
+    }
+}

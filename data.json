@@ -1,47 +1,47 @@
 {
   "journal": {
     "nomJournal": "Arcana Hebdo",
-    "imageLogo" : "logo.svg",
-    "avatar": "",
+    "imageLogo" : "assets/logo.svg",
+    "avatar": "assets/avatar.jpg",
     "phraseAccroche": "Explorez les secrets du monde occulte et de l’art magique",
-    "texteAppelAction": "Inscrivez-vous pour recevoir nos grimoires numériques chaque semaine",
+    "texteAppelAction": "Grimoires numériques chaque semaine",
     "articlePrincipal": {
       "titre": "Magie et réalité : Où finit la science, où commence le surnaturel ?",
       "description": "Un dossier spécial sur les frontières floues entre illusion, traditions ésotériques et science moderne.",
       "date": "21 Mai 2025",
       "theme": "Mystères & vérités",
-      "image": "https://cdn.pixabay.com/photo/2016/02/06/21/57/magic-1185252_1280.jpg"
+      "image": "https://images.unsplash.com/photo-1512331455279-c8ae8178f586?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "articles": [
       {
         "titre": "La magie dans l’Histoire : des sorcières aux alchimistes",
         "date": "15 Mai 2025",
         "theme": "Histoire occulte",
-        "image": "https://cdn.pixabay.com/photo/2022/09/23/12/47/magic-7474469_1280.jpg"
+        "image": "assets/image.png"
       },
       {
         "titre": "Rituels modernes : entre spiritualité et folklore",
         "date": "10 Mai 2025",
         "theme": "Pratiques contemporaines",
-        "image": "https://cdn.pixabay.com/photo/2020/10/31/18/28/magic-5703457_1280.jpg"
+        "image": "assets/image.png"
       },
       {
         "titre": "Magie et pop culture : Harry Potter, Marvel et au-delà",
         "date": "5 Mai 2025",
         "theme": "Fiction & inspirations",
-        "image": "https://cdn.pixabay.com/photo/2020/05/24/20/32/harry-potter-5216626_1280.jpg"
+        "image": "assets/image.png"
       },
       {
         "titre": "Cartomancie, runes, pendule : peut-on prédire l’avenir ?",
         "date": "1er Mai 2025",
         "theme": "Arts divinatoires",
-        "image": "https://cdn.pixabay.com/photo/2020/07/10/16/49/tarot-5390581_1280.jpg"
+        "image": "assets/image.png"
       },
       {
         "titre": "Les illusions des magiciens : la science derrière la magie de scène",
         "date": "26 Avril 2025",
         "theme": "Magie visuelle",
-        "image": "https://cdn.pixabay.com/photo/2014/11/05/18/01/magic-518859_1280.jpg"
+        "image": "assets/image.png"
       }
     ],
     "themes": [
