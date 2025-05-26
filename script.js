@@ -249,14 +249,14 @@ function getData() {
         
         });
         
-
+*/
 
         let footerConteneur = document.getElementById("footerConteneur")
         let footerDiv = document.createElement("p")
         footerDiv.className = "footerDiv"
 
         footerDiv.textContent = "Arcana Hebdo - 2025"
-        footerConteneur.appendChild(footerDiv)*/
+        footerConteneur.appendChild(footerDiv)
 
      
 
