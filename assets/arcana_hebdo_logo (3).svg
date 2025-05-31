@@ -1,0 +1,11 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Emblem only -->
+  <circle cx="25" cy="25" r="23" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.7"/>
+  <path d="M25,10 L38,37 L12,37 Z" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.8"/>
+  <circle cx="25" cy="25" r="5" fill="none" stroke="#DAA520" stroke-width="0.8" opacity="0.9"/>
+  <circle cx="25" cy="25" r="1" fill="#DAA520"/>
+  <line x1="25" y1="5" x2="25" y2="12" stroke="#ffffff" stroke-width="0.3" opacity="0.5"/>
+  <line x1="25" y1="38" x2="25" y2="45" stroke="#ffffff" stroke-width="0.3" opacity="0.5"/>
+  <line x1="5" y1="25" x2="12" y2="25" stroke="#ffffff" stroke-width="0.3" opacity="0.5"/>
+  <line x1="38" y1="25" x2="45" y2="25" stroke="#ffffff" stroke-width="0.3" opacity="0.5"/>
+</svg>
