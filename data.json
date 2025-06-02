@@ -70,6 +70,38 @@
         "description": "La magie de scène, les tours et illusions qui captivent l’œil du spectateur."
       }
     ],
+    "carrousel": [
+  {
+   "titre": "La magie dans l’Histoire : des sorcières aux alchimistes",
+        "date": "15 Mai 2025",
+        "theme": "Histoire occulte",
+        "image": "assets/witches.jpg"
+      },
+      {
+        "titre": "Rituels modernes : entre spiritualité et folklore",
+        "date": "10 Mai 2025",
+        "theme": "Pratiques contemporaines",
+        "image": "assets/rituals.jpg"
+      },
+      {
+        "titre": "Magie et pop culture : Harry Potter, Marvel et au-delà",
+        "date": "5 Mai 2025",
+        "theme": "Fiction & inspirations",
+        "image": "assets/harrymarvel.jpg"
+      },
+      {
+        "titre": "Cartomancie, runes, pendule : peut-on prédire l’avenir ?",
+        "date": "1er Mai 2025",
+        "theme": "Arts divinatoires",
+        "image": "assets/futur.jpg"
+      },
+      {
+        "titre": "Les illusions des magiciens : la science derrière la magie de scène",
+        "date": "26 Avril 2025",
+        "theme": "Magie visuelle",
+        "image": "assets/magic.jpg"
+  }
+],
     "auteurs": [
       {
         "avatar" : "assets/equipe1.jpg",

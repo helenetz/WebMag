@@ -12,6 +12,7 @@ function getData() {
        /// ON ECRIT LE CODE ICI ! 
           
        
+       
 
         let navConteneur = document.getElementById("navConteneur")
        
@@ -90,7 +91,7 @@ function getData() {
         afficherArticlePrincipal(data);
         afficherAutresArticles(data);
         afficherAuteurs(data);
-
+        boutonAleatoire(data);
  
         divAuteurs = document.createElement("h2");
         divAuteurs.classList.add = "divAuteurs";
@@ -101,6 +102,8 @@ function getData() {
 
         console.log(titreEquipe);
         autresConteneurs.appendChild(divAuteurs)
+
+   
         
 
         let footerConteneur = document.getElementById("footerConteneur")
@@ -189,43 +192,102 @@ function afficherArticlePrincipal(data) {
   articleRecentConteneur.appendChild(btn);
 }
 
+
+
 function afficherAutresArticles(data) {
   let autresConteneurs = document.getElementById("autresConteneurs");
   let divArticles = document.createElement("div");
   divArticles.className = "divArticles";
 
-  data.journal.articles.forEach(article => {
-    let carte = document.createElement("div");
-    carte.className = "carteArticles";
+if (data.journal.carrousel && Array.isArray(data.journal.carrousel)) {
+  let carrouselImages = document.getElementById("carrouselImages");
+  let index = 0;
 
-    let titre = document.createElement("h3");
-    titre.className = "titreArticlesAutre";
-    titre.textContent = article.titre;
-    carte.appendChild(titre);
+  data.journal.carrousel.forEach(item => {
+    let slide = document.createElement("div");
+    slide.className = "carrousel-slide";
 
     let img = document.createElement("img");
-    img.className = "imgArticlesAutre";
-    img.src = article.image;
-    img.alt = article.titre;
-    carte.appendChild(img);
+    img.src = item.image;
+    img.alt = item.titre;
+    slide.appendChild(img);
 
-    let date = document.createElement("p");
-    date.className = "dateArticlesAutre";
-    date.textContent = `${article.date} - ${article.theme}`;
-    carte.appendChild(date);
+    let titre = document.createElement("h3");
+    titre.textContent = item.titre;
+    slide.appendChild(titre);
+
+    let theme = document.createElement("p");
+    theme.textContent = item.theme;
+    slide.appendChild(theme);
 
     let btn = document.createElement("button");
     btn.className = "btn-lire-article";
     btn.textContent = "Lire l'article";
-    carte.appendChild(btn);
+    slide.appendChild(btn);
 
-    divArticles.appendChild(carte);
+    carrouselImages.appendChild(slide);
   });
+
+  let slides = document.querySelectorAll(".carrousel-slide");
+
+  document.querySelector(".carrousel-btn.left").addEventListener("click", () => {
+    index = (index <= 0) ? slides.length - 1 : index - 1;
+    carrouselImages.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  document.querySelector(".carrousel-btn.right").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    carrouselImages.style.transform = `translateX(-${index * 100}%)`;
+  });
+}
+        
 
   autresConteneurs.appendChild(divArticles);
 }
 
 
+
+function boutonAleatoire(data) {
+  const articles = data.journal.articles;
+  const autresConteneurs = document.getElementById("autresConteneurs");
+
+  const bouton = document.createElement("button");
+  bouton.className = "boutonAleatoire";
+  bouton.textContent = "Arcana, choisis pour moi !";
+  autresConteneurs.appendChild(bouton);
+
+  
+  const articleAffichage = document.createElement("div");
+  articleAffichage.id = "articleAleatoire";
+  articleAffichage.className = "article-fullscreen"; 
+  articleAffichage.style.display = "none"; 
+  document.body.appendChild(articleAffichage);
+
+  bouton.addEventListener("click", () => {
+    const index = Math.floor(Math.random() * articles.length);
+    const article = articles[index];
+
+    articleAffichage.innerHTML = `
+      <div class="carte-article-large">
+        <span class="close-button">&times;</span>
+        <img src="${article.image}" alt="${article.titre}">
+        <h2>${article.titre}</h2>
+        <h4><strong> ${article.date}</strong></h4>
+        <p><strong> ${article.theme}</strong></p>
+       
+        <button class="read-button">Lire l'article</button>
+      </div>
+    `;
+
+    articleAffichage.style.display = "flex";
+
+   
+    const closeBtn = articleAffichage.querySelector(".close-button");
+    closeBtn.addEventListener("click", () => {
+      articleAffichage.style.display = "none";
+    });
+  });
+}
 function afficherAuteurs(data) {
   let autresConteneurs = document.getElementById("autresConteneurs");
   let divAuteurs = document.createElement("div");
